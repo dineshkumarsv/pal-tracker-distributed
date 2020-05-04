@@ -1,4 +1,4 @@
-package io.pivotal.pal.tracker.allocations;
+package io.pivotal.pal.tracker.backlog;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
@@ -19,10 +19,13 @@ public class ProjectClient {
         this.restOperations = restOperations;
         this.endpoint = registrationServerEndpoint;
     }
+
     @CircuitBreaker(name = "project", fallbackMethod = "getProjectFromCache")
     public ProjectInfo getProject(long projectId) {
         ProjectInfo project = restOperations.getForObject(endpoint + "/projects/" + projectId, ProjectInfo.class);
+
         projectsCache.put(projectId, project);
+
         return project;
     }
 
