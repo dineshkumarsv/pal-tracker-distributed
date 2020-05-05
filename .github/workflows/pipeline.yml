@@ -25,7 +25,6 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: pal-tracker-distributed
-          working-directory: applications/allocations-server/build/libs
           path: applications/allocations-server/build/libs/allocations-server.jar
       - name: Publish backlog artifact
         uses: actions/upload-artifact@v1
