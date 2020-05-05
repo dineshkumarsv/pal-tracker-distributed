@@ -3,9 +3,7 @@ name: Pal Tracker Distributed Pipeline
 on:
   push:
     branches: [master]
-  watch:
-    types: [started]
-
+    
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
