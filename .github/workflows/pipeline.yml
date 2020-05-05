@@ -3,6 +3,8 @@ name: Pal Tracker Distributed Pipeline
 on:
   push:
     branches: [master]
+  watch:
+    types: [started]
 
 jobs:
   build-and-publish:
