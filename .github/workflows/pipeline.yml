@@ -13,6 +13,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: Delete Artifact
+        uses: GeekyEggo/delete-artifact@v1.0.0
+        with:
+          name: pal-tracker-distributed            
       - name: Startup test database instance
         run: sudo service mysql start
       - name: Create test database
