@@ -34,3 +34,5 @@ public class OauthResourceServerConfig extends ResourceServerConfigurerAdapter {
         resources.resourceId(null);
     }
 }
+
+

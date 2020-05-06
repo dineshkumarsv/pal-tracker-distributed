@@ -24,3 +24,4 @@ public class NoOauthResourceServerConfig extends ResourceServerConfigurerAdapter
         return new RestTemplate();
     }
 }
+
