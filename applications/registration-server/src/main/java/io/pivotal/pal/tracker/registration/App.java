@@ -10,9 +10,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 import java.util.TimeZone;
 
-@EnableWebSecurity
-@EnableResourceServer
-@EnableOAuth2Client
 @EnableEurekaClient
 @SpringBootApplication
 @ComponentScan({
@@ -22,6 +19,9 @@ import java.util.TimeZone;
     "io.pivotal.pal.tracker.users",
     "io.pivotal.pal.tracker.registration"
 })
+@EnableWebSecurity
+@EnableResourceServer
+@EnableOAuth2Client
 public class App {
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
