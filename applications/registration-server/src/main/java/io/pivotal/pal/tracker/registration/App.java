@@ -21,7 +21,6 @@ import java.util.TimeZone;
 })
 @EnableWebSecurity
 @EnableResourceServer
-@EnableOAuth2Client
 public class App {
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
